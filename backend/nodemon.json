@@ -1,0 +1,7 @@
+{
+  "env": {
+    "DB_USER": "pablo",
+    "DB_PASS": "Du1BcwIIsvsth0Im",
+    "DB_NAME": "vehicles_test"
+  }
+}

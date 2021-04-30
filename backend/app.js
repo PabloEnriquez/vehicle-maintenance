@@ -25,7 +25,7 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || 'Unknown error' })
 })
 
-const url = 'mongodb+srv://pablo:Du1BcwIIsvsth0Im@cluster0.rc0u1.mongodb.net/vehicles_test?retryWrites=true&w=majority'
+const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.rc0u1.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
 mongoose
   .connect(url, {
     bufferCommands: false,
