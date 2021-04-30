@@ -22,7 +22,7 @@ app.use((error, req, res, next) => {
     return next(error)
   }
   res.status(error.code || 500)
-  res.json({ message: error.message || 'Unknown error' })
+  res.json({ message: error.message || 'Unknown error happened' })
 })
 
 const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.rc0u1.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
