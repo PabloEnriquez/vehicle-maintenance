@@ -3,7 +3,6 @@ const { validationResult } = require('express-validator')
 const HttpError = require('./models/http-error')
 const Vehicle = require('./models/vehicle')
 
-
 const getVehicles = async (req, res, next) => {
   let vehicles
 
@@ -62,9 +61,6 @@ const setMaintenance = async (req, res, next) => {
 }
 
 const createVehicle = async (req, res, next) => {
-  // const {
-  //   description, make, model, id, image, attendant, estimatedate, maintenance
-  // } = req.body
   const createdVehicle = new Vehicle(req.body)
 
   try {
