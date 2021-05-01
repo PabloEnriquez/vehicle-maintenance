@@ -6,6 +6,7 @@ const vehicleSchema = new mongoose.Schema({
   model: { type: String, required: false },
   estimatedate: { type: String, required: false },
   id: { type: Number, required: false },
+  km: { type: Number, required: false },
   image: { type: String, required: false },
   attendant: { type: String, required: false }
 })
